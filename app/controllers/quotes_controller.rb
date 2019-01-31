@@ -15,7 +15,7 @@ class QuotesController < OpenReadController
 
   # POST /quotes
   def create
-    @quote = current_user.quote.build(quote_params)
+    @quote = current_user.quotes.build(quote_params)
 
     if @quote.save
       render json: @quote, status: :created, location: @quote
