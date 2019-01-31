@@ -1,15 +1,14 @@
 #!/bin/bash
 
-curl "http://localhost:4741/quotes" \
+curl "http://localhost:4741/quotes/${ID}" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "quote": {
       "text": "'"${TEXT}"'",
-      "cite": "'"${CITE}"'",
-      "user_id": "'"${USER}"'"
+      "cite": "'"${CITE}"'"
     }
   }'
 
