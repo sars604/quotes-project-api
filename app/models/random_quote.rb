@@ -1,0 +1,2 @@
+class RandomQuote < ApplicationRecord
+end
