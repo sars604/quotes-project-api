@@ -10,7 +10,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
-require 'pry'
 
 csv_text = File.read(Rails.root.join('db', 'quotesnew.csv'))
 
